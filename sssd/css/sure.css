@@ -1,0 +1,302 @@
+body{
+font-family: "Microsoft YaHei",微软雅黑;
+height:100%;
+font-size: 13px;
+background-color: #EEE;
+}
+
+
+#ads{
+    background-color: white;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    _position:absolute;
+    _top:expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);
+    opacity: 0.8;
+}
+
+#footer1{
+    height: 49px;
+    line-height: 49px;
+    font-size: 13px;
+    text-align: center; 
+    font-weight: bold; 
+    color: white;
+}
+
+#footer2{
+    height: 44px;
+    /*line-height: 44px;
+    padding: 11px 0px 11px 0px;*/
+    padding-top: 8px;
+}
+
+.xiaDanButton{
+    border-radius: 18px;
+    border-color: #F94F29;
+    background-color: #F94F29;
+    color: white; 
+}
+
+.xiaDanButton:hover{
+    border-color: #F94F29;
+    background-color: #F94F29;
+    color: white; 
+}
+
+
+.divLine{
+    height: 1px;
+    width: 100%;
+    background-color: #d8d8d8;
+}
+
+.item{
+
+    border-left:0px solid #d8d8d8;
+    border-right:0px solid #d8d8d8;
+    border-top:0px solid #d8d8d8;
+    border-bottom:1px solid #d8d8d8;
+
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.childItem{
+    height: 40px;
+    line-height: 40px;   
+    padding-left: 0px;
+    padding-right: 0px; 
+    color: #585858;
+}
+
+
+.foodName{
+    color: #585858;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.itemPriceFontSize{
+    font-size: 11px;
+}
+
+.buttonPM{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 0px 0px 0px;
+    color: #777777;
+    border-radius:0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttonPM0{
+    width: 40px;
+    text-align: center;
+}
+
+
+/*这是Button hover的颜色*/
+.buttonPM:hover{
+    background-color: #FFF;
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none;
+}
+
+.myButtonPM{
+    margin: 0px;
+}
+
+/*这是Button border的颜色*/
+.btn-primary {
+    border-color: #FFF;
+}
+
+
+
+
+
+.footBig{
+    font-size: 50px;
+}
+
+.footSmall{
+    font-size: 20px;
+}
+
+
+
+
+
+
+/*确认订单页面*/
+.userInfo{
+    background-color: #F94F29;
+    color: white;
+}
+
+#userInfo{
+    height: 79px;
+}
+
+#location{
+    height: 79px;
+    line-height: 80px;
+}
+
+#info{
+    height: 79px;
+    padding: 12px 0px 0px 0px;
+}
+
+
+.my_form_control{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    width: 50%;
+    font-size: 30px;
+}
+
+.my_form_control_PM{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 30px;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+/*
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.inputBold{
+    font-weight:900;
+}
+*/
+
+
+.width100{
+    width: 100%;
+}
+
+.noPadding{
+}
+
+.border_bottom_1px{
+}
+
+
+/*
+.buy{
+    color: white;
+    border-radius: 20px;
+    background-color: #F94F29;
+}*/
+
+.buy:hover{
+    background-color: #F94F29;
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none;
+}
+
+.basicColor{
+    color: #F94F29;
+}
+
+
+#gap{
+    width: 100%;
+    height: 20px;
+}
+
+
+
+
+/*
+    26/03/2014新加的CSS
+*/
+
+.selectHeight{
+    width:63%; height:30px;
+}
+
+.peiSongFei{
+    color: #585858; font-size: 100%; text-align: left;
+}
+
+.payWay{
+    height: 60px; line-height: 60px; text-align: left;
+}
+
+.huoDaoFuKuanDiv{
+    height: 60px; line-height: 60px; text-align: right;
+}
+
+.huoDaoFuKuanButton{
+    border: 1px solid #F94F29;
+    width: 63%;
+    height: 30px;
+}
+
+.man30{
+    color: #999999; font-size: 70%;
+}
+
+.mian2yuan{
+    color: #585858; font-size: 100%;
+}
+
+.xiaDanRowBackground{
+    background-color: #f7f7f7;
+}
+
+.totalCountPriceRow{
+    border-bottom: solid 1px #d8d8d8; background-color: #767676;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+color: #fff;
+background: #F94F29;
+}
+
+.withBottom{padding-top: 4px; border-top: solid 1px #d8d8d8;}
+
+select{border: 1px solid #aaaaaa;}
+
+
+.btn-default.disabled, .btn-default[disabled]{
+    background-color: #fff;
+    border-color: #F94F29;
+}
+
+.highLight{color: #F94F29;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

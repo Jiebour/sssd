@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>订餐完毕</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/done.css"/>
+
+  </head>
+  <body>
+<img id="shareImg" src="img/shareImg.png" class="img-responsive" style="display:none;">
+    <div id="mainContent" class="container bodyContainer">
+
+      <p class="title">
+        购买清单：
+      </p>
+
+      <p class="content">
+        地三鲜几份多少钱啥的
+      <p>
+
+      <div class="divLine"></div>
+      <p class="title">
+        总计：
+        <span class="contentInline">￥<span>
+        <span class="contentInline">128<span>
+      </p>
+
+      <p class="title">
+        预计送达：
+        <span class="contentInline">12：28<span>
+      </p>
+
+      <p class="bingGo">
+        恭喜您，您是今天前30位订餐的用户，随食随递今天请您吃霸王餐！稍后，送餐员GG会自动扣减您一份餐费！
+      </p>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <button id="closeButton" type="button" class="btn btn-default btn-lg btn-block zhiDaoLe">无情滴关闭</button>
+    </div>
+    <div class="col-xs-6">
+      <button id="shareButton" type="button" class="btn btn-default btn-lg btn-block zhiDaoLe">晒单赢积分</button>
+    </div>
+  </div>
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  $('#closeButton').on('click', function () {
+    //window.open("www.baidu.com");
+    window.location.href="http://www.suishi365.com/wap//index.jsp";
+  });
+
+  $('#shareButton').on('click', function () {
+    $('#mainContent').css('display','none');
+    $('#shareImg').css('display','block');
+  });
+
+  $('#shareImg').on('click', function () {
+    $('#shareImg').css('display','none');
+    $('#mainContent').css('display','block');
+  });  
+</script>
+
+  </body>
+</html>
+
+<!--
+  我的13行，你直接复制粘贴
+-->

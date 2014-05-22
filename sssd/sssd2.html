@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>随时随递</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/1.css"/>
+
+
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+//总的份数
+var totalCount = 0;
+//总的价格
+var totalPrice = 0;
+
+function add(th){
+  th.children[0].innerHTML = parseInt(th.children[0].innerHTML) + 1;
+  th.children[0].style.backgroundColor = "#F94F29";
+  totalCount++;
+  document.getElementById("footerCount").innerHTML = totalCount;
+}
+</script>
+
+</head>
+<body style="background-color: #eeeeee; height: 100%; padding-top: 44px;" >
+
+
+
+
+
+
+
+<div class="container navbar-fixed-top" style="width:100%; background-color: #F94F29;">
+    <div class="myNavTab">
+      <a href="#h0">米饭</a>
+    </div>
+    <div class="myNavTab">
+      <a href="#h1">套餐</a>
+    </div>
+    <div class="myNavTab">
+      <a href="#h2">粉汤</a>
+    </div>
+<div class="myNavTab">
+<div class="dropdown">
+          <a data-toggle="dropdown" class="dropdownMenuA" href="#">更多</a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li role="presentation" style="background-color: #eeeeee; text-align: center; color: #F94F29; font-size: 29px; height:25px;">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </li>
+            <li style="height:4px;"><li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#h3" style="background-color: #F94F29;">米饭</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#h3">米饭</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#h3">米饭</a></li>
+          </ul>
+        </div>
+</div>
+</div>
+
+
+
+
+
+<div class="container" data-spy="scroll" data-target="#navbar-example">
+<h4 id="h0">经典套餐</h4>
+<div id="item0" class="container" style="border-top: solid 1px #d5d5d5; border-left: solid 1px #d5d5d5; border-right: solid 1px #d5d5d5; border-top-left-radius: 8px; border-top-right-radius: 5px; background-color: white;">
+<div class="row">
+  <div class="itemCountName col-xs-8 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      这个菜是八个字（的）
+    </span>
+  </div>
+  <div class="col-xs-4 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+</div>
+
+<h4 id="h1">20元超值</h4>
+<div id="item0" class="container" style="border-top: solid 1px #d5d5d5; border-left: solid 1px #d5d5d5; border-right: solid 1px #d5d5d5; border-top-left-radius: 8px; border-top-right-radius: 5px; background-color: white;">
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+</div>
+
+<h4 id="h2">粉汤</h4>
+<div id="item0" class="container" style="border-top: solid 1px #d5d5d5; border-left: solid 1px #d5d5d5; border-right: solid 1px #d5d5d5; border-top-left-radius: 8px; border-top-right-radius: 5px; background-color: white;">
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+</div>
+
+<h4 id="h3">更多</h4>
+
+<div id="item0" class="container" style="border-top: solid 1px #d5d5d5; border-left: solid 1px #d5d5d5; border-right: solid 1px #d5d5d5; border-top-left-radius: 8px; border-top-right-radius: 5px; background-color: white;">
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+<div class="row">
+  <div class="itemCountName col-xs-7 addButton" onclick="add(this)">
+    <div class="itemCount">+</div>
+    <span class="itemName">
+      地三鲜
+    </span>
+  </div>
+  <div class="col-xs-5 itemPrice">
+    ￥<span>12</span>&nbsp;
+    <div class="itemMinus minusButton">-</div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="footer" class="container" style="width:100%;">
+  <div class="row clearfix">
+    <div class="col-xs-9" style="height: 55px; line-height: 55px; text-align: left; color: white; background-color: #767676; opacity: 0.8;">
+      <span id="footerCount" style="font-size: 24px">0</span>
+      <span style="font-size: 12px">份</span>
+      <span style="font-size: 24px">￥</span>
+      <span id="footerTotalPrice" style="font-size: 24px">0</span>
+      <span style="font-size: 12px">|满30元免2元配送费</span>
+    </div>
+    <div class="col-xs-3" style="height: 55px; line-height: 55px; text-align: left; color: white; background-color: #F94F29">
+      <span style="font-size: 16px" onclick="goToPay()">去结算</span>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+<!--
+  1)body开始的地方：加上padding-top: 44px;
+  2)该页的所有col-xs-7 替换为col-xs-8 对应的col-xs-5替换为col-xs-4......
+-->

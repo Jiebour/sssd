@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>新建送餐地址</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/sssd.css"/>
+    <link rel="stylesheet" type="text/css" href="css/newAddress.css"/>
+  </head>
+  <body style="background-color: #f4f4f4;">
+
+<div class="container" style="width:100%;">
+  <div class="row">
+    <div id="newTitle" class="col-xs-12 textCenter" style="height: 42px; line-height: 42px; color:#646464; font-size: 15px;">新建送餐地址
+    </div>
+  </div>
+  <div class="row item">
+    <input type="text" class="inputInNewAddress" id="name" placeholder="联系人姓名" />
+  </div>
+  <div class="row item">
+    <input type="tel" class="inputInNewAddress" id="phone" placeholder="手机号码" />
+  </div>
+<div class="h80" style="border-bottom: solid 1px #d8d8d8; padding-top: 5px; padding-bottom: 5px; background-color: white;">
+<div class="row">
+  <div class="col-xs-4" style="color: #4f4f4f;">一级</div>
+  <div class="col-xs-8" style="text-align: right;">
+<select id="Province" class="selectHeight" onchange="return select();"style="width:60%; height:30px;">
+　　　                                                 <option selected="selected"></option>
+　　　　　　　                                         <option value="1">北京</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="2">上海</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="3">天津</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="4">重庆</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="5">河北</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="6">山西</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="7">内蒙古</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="8">辽宁</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="9">吉林</option>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　 <option value="10">黑龙江</option>
+</select>
+  </div>
+</div>
+</div>
+
+<div class="h80" style="border-bottom: solid 1px #d8d8d8; padding-top: 5px; padding-bottom: 5px; background-color: white;">
+<div class="row">
+  <div class="col-xs-4" style="color: #4f4f4f; text-align: left;">二级</div>
+  <div class="col-xs-8" style="text-align: right;">
+  　　　 <select id="City" class="selectHeight" onchange="return result();" style="width:60%; height: 30px;">
+　　　　　　　 <option selected="selected"></option>
+　　　   </select>
+  </div>
+</div>
+</div>
+  <div class="row item">
+    <input type="text" class="inputInNewAddress" id="detailedAddress" placeholder="详细地址"/>
+  </div>
+</div>
+<br>
+<div class="container" style="width:100%; padding: 0px 4px 0px 4px">
+  <button type="button" class="btn btn-default btn-lg btn-block"  onclick="submit()">保存地址</button>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
+<!--保存地址增加了2个换行-->

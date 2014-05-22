@@ -1,0 +1,73 @@
+/*新建地址*/
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.item{
+    height: 40px;
+    padding-left: 10px;
+}
+
+
+.textCenter{
+    text-align: center;
+    border-bottom: solid 1px #d8d8d8;
+}
+
+.inputInNewAddress{
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    font-size: 15px;
+    color: #d4d4d4;
+}
+
+.threeSelect{
+    font-size: 20px;
+    color: #cdcdcd;
+}
+
+.btnInNewAddress{
+    width: 100%;
+}
+
+/*这是Button hover的颜色*/
+.btn:hover{
+    background-color: #F94F29;
+}
+
+/*这是Button border的颜色*/
+.btn-primary {
+    border-color: #FFF;
+    background-color: #F94F29;
+}
+
+.btn-block{
+    background-color: #F94F29; border-color: #F94F29; color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+textarea:focus, input:focus {
+    color: #000000;
+}

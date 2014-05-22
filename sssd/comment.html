@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>评论</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+.item{border-bottom: 1px solid #eeeeee; padding: 8px 0px 12px 0px;}
+body{padding-right: 8px; padding-left: 8px;}
+
+        /*这两行CSS模拟了flatUI典型的input样式*/
+        input{border: 1px solid #bdc3c7; color: #34495e; padding: 4px; border-radius: 2px;
+              transition: border linear .2s,box-shadow linear .2s;
+          -webkit-appearance: none; -webkit-box-shadow: none; box-shadow: none;}
+        input:focus{border-color: #F94F29; -webkit-box-shadow: none;
+                    -moz-box-shadow: none; box-shadow: none; outline: none;}
+        input{display: block; width: 100%; height: 36px; font-size: 14px;}
+
+        /*这两行CSS模拟了flatUI典型的textArea样式*/
+        .myTextArea{border: 1px solid #bdc3c7; width: 100%; padding: 4px; font-size: 14px;
+        transition: border linear .2s,box-shadow linear .2s; border-radius: 2px;
+        -webkit-appearance: none; -webkit-box-shadow: none; box-shadow: none; line-height: 18px;}
+        textarea:focus{border-color: #F94F29; -webkit-box-shadow: none;
+                    -moz-box-shadow: none; box-shadow: none; outline: none;}
+
+        .form-control{height: 36px; font-size: 14px; line-height: 14px; border: 1px solid #bdc3c7;}            
+
+.fileInput{border: none; font-size: 18px; width: 100%;}
+input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
+outline: none;
+}     
+
+.btn-primary{background-color: #F94F29; border: none;}
+
+.btn-primary:hover{
+color: #fff;
+background-color: #F94F29;
+border-color: #F94F29;
+}   
+
+
+
+.col-xs-4{padding-left: 5px; padding-right: 5px;}
+.col-xs-12{padding-left: 5px; padding-right: 5px;}
+.col-xs-6{padding-left: 5px; padding-right: 5px;}
+
+
+.form-control:focus {
+border-color: #F94F29;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+}
+
+h4{color: #F94F29; font-size: 14px;}
+h3{font-size: 18px; color: #F94F29; font-weight: bold;}
+
+
+
+h1, h2, h3, h4 {
+margin-top: 8px;
+margin-bottom: 12px;
+}
+
+.h3Span{color: #333;}
+
+    </style>  
+
+
+  </head>
+  <body>
+
+    <div class="container" style="padding-top: 10px;">
+
+
+      <div class="row item">
+        <div class="col-xs-12">
+          <p>感谢您给予我们的宝贵的评价，你的评价是我们前进的动力，我们将努力做的更好:)</p>
+        </div>
+      </div>
+
+      <div class="row item">
+        <div class="col-xs-6">
+          <h3>饭菜评价:</h3>
+        </div>
+
+        <div class="col-xs-3">
+          <h3 class="h3Span"><span id="fanCai1" class="glyphicon glyphicon-thumbs-up" onclick="hit(1, 'fanCai')"></span></h3>
+        </div> 
+
+        <div class="col-xs-3">
+          <h3 class="h3Span"><span id="fanCai0" class="glyphicon glyphicon-thumbs-down" onclick="hit(0, 'fanCai')"></span></h3>
+        </div>     
+
+        <div class="col-xs-12">           
+            <textarea rows="4" class="myTextArea" id="reasonFanCai" placeholder="在此做个点评？谢谢:)"></textarea>
+        </div>
+      </div>
+
+
+
+      <div class="row item">
+        <div class="col-xs-6">
+          <h3>配送评价:</h3>
+        </div>
+
+        <div class="col-xs-3">
+          <h3 class="h3Span"><span id="peiSong1" class="glyphicon glyphicon-thumbs-up" onclick="hit(1, 'peiSong')"></span></h3>
+        </div> 
+
+        <div class="col-xs-3">
+          <h3 class="h3Span"><span id="peiSong0" class="glyphicon glyphicon-thumbs-down" onclick="hit(0, 'peiSong')"></span></h3>
+        </div>     
+
+        <div class="col-xs-12">           
+            <textarea rows="4" class="myTextArea" id="reasonPeiSong" placeholder="在此做个点评？谢谢:)"></textarea>
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <br>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="submitComment()">完成点评:)</button>
+        </div> 
+        <div class="col-xs-12" style="text-align: center; padding-top: 6px;">
+            <p id="hintInfo"></p>
+        </div>        
+      </div>  
+
+<br><br><br>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+
+var fanCaiLiked = -1;
+var peiSongLiked = -1; 
+
+function hit(liked, item){
+
+    //alert(1);
+
+    var id = item + liked;
+    var idOpposite = item + (1 - liked);
+
+    //alert(2);
+
+    document.getElementById(id).style.color = '#F94F29';
+    document.getElementById(idOpposite).style.color = '#333';
+
+    if(item == 'fanCai'){
+        fanCaiLiked = liked;
+    }else{peiSongLiked = liked;} 
+
+    //alert(fanCaiLiked + " " + peiSongLiked); 
+
+}
+
+function custom_close(){
+    $('#submitBasicInfo').prop("disabled", true);
+    alert("项目发布成功，点此浏览:)");
+/*    
+window.opener=null;
+window.open('','_self');
+window.close();
+*/
+window.location.href="checkPublish.html";
+
+}
+
+
+
+    function submitPublishInfo(){
+
+        var name = document.getElementById("name").value;
+        var description = document.getElementById("description").value;
+        var detailedDescription = document.getElementById("detailedDescription").value;
+
+        if(name.length < 2){alert("姓名过短:)");return;}
+        if(description.length < 5){alert("一句话过短:)");return;}
+        if(detailedDescription.length < 50){alert("详细描述过短:)");return;}
+
+        
+
+        //alert(name + " " + sex);
+
+
+        $.ajax({
+        type: 'POST',
+        url: ('./php/publish.php'),//从哪个页面获取数据
+        data: {'name':name, 'description':description, 
+        'detailedDescription':detailedDescription,},
+                 /*
+        contentType: false, //必须
+        processData: false, //必须
+        */
+        dataType:'json',
+        beforeSend:function(){
+        },
+        success:function(json){
+            var arr = json;
+            if(arr['status'] == 1){
+                //$('#hintInfo').text("项目发布成功！页面即将关闭...");
+                //timedCount();
+                custom_close();
+            }
+            else{
+                $('#hintInfo').text("项目发布失败...:(请联系小撸.");
+            }
+            
+        },
+        complete:function(){ //生成分页条
+            //getPageBar();
+        },
+        error:function(){
+        }
+    });
+    }
+    </script>
+
+
+  </body>
+</html>
+
+
+
+

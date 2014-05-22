@@ -1,0 +1,28 @@
+body{background-color: #f4f4f4; height:100%; font-family: "Microsoft YaHei",微软雅黑;}
+
+.bodyContainer{
+	padding-top: 22px;
+}
+
+.title{font-size: 15px; text-align: left; color: #777777; font-weight: bold;}
+
+.content{font-size: 13px; color: #F94F29; text-align: left;}
+
+.contentInline{font-size: 13px; color: #F94F29; text-align: left;}
+
+.divLine{
+    height: 1px;
+    width: 100%;
+    background-color: #d8d8d8;
+    margin-bottom: 8px;
+}
+
+.zhiDaoLe{background-color: #F94F29; border-color: #F94F29; color: white; margin-top: 20px;}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+color: #333;
+background-color: #F94F29;
+border-color: #F94F29;
+}
+
+.bingGo{background-color: #dddddd; color: #cc0000; font-weight: bold; font-size: 15px;}
