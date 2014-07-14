@@ -8,30 +8,64 @@
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/1.css"/>
 
-
-<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-<script>
-//总的份数
-var totalCount = 0;
-//总的价格
-var totalPrice = 0;
-
-function add(th){
-  th.children[0].innerHTML = parseInt(th.children[0].innerHTML) + 1;
-  th.children[0].style.backgroundColor = "#F94F29";
-  totalCount++;
-  document.getElementById("footerCount").innerHTML = totalCount;
-}
-</script>
-
 </head>
-<body style="background-color: #eeeeee; height: 100%; padding-top: 44px;" >
+<body style="background-color: #eeeeee; height: 100%; padding-top: 44px;">
+
+
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/户型欣赏1.png" alt="...">
+    </div>
+
+    <div class="item">
+      <img src="img/户型欣赏1.png" alt="...">
+    </div>
+
+    <div class="item">
+      <img src="img/户型欣赏1.png" alt="...">
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+  </a>
+</div>
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+<div class="container" data-spy="scroll" data-target="#navbar-example">
+
+
+<div class="pinned" style="height:40px; width:100%; background:#000;"></div>
+
+<!--navbar-fixed-top -->
 
 <div class="container navbar-fixed-top" style="width:100%; background-color: #F94F29;">
     <div class="myNavTab">
@@ -63,7 +97,8 @@ function add(th){
 
 
 
-<div class="container" data-spy="scroll" data-target="#navbar-example">
+
+
 <h4 id="h0">经典套餐</h4>
 <div id="item0" class="container" style="border-top: solid 1px #d5d5d5; border-left: solid 1px #d5d5d5; border-right: solid 1px #d5d5d5; border-top-left-radius: 8px; border-top-right-radius: 5px; background-color: white;">
 <div class="row">
@@ -189,7 +224,8 @@ function add(th){
 </div>
 </div>
 </div>
-</div>
+
+
 
 <div id="footer" class="container" style="width:100%;">
   <div class="row clearfix">
@@ -206,10 +242,56 @@ function add(th){
   </div>
 </div>
 
+
+
+
+
+
+
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!--<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+    <script src="js/jquery.pin.js"></script>
+
+
+    <!-- PIN ALL THE THINGS! -->
+    <script>
+      //$(".pinned").pin();
+      $(".pinned").pin({containerSelector: ".container", minWidth: 100});
+      //$(".pinned").pin({containerSelector: ".container"});
+    </script>
+    <!-- That's all - pretty easy, right? -->
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+  $('h1').css('display', 'none');
+
+$('#carousel-example-generic').on('swipeleft',function(){
+  $('#carousel-example-generic').carousel('next');
+});
+
+$('#carousel-example-generic').on('swiperight',function(){
+  $('#carousel-example-generic').carousel('prev');
+});
+
+});  
+
+</script>
+
+
+
+
+
   </body>
 </html>
 

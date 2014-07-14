@@ -97,6 +97,40 @@
 <div id="gap"></div>
 <div class="container">
 
+<style type="text/css">
+  .round{}
+  .liaoBao{background: #cccccc; border-radius: 4px; border: 1px solid #aaa;  text-align: center;}
+  .noPLR{padding-left: 0px; padding-right: 0px;}
+  .noPR{padding-right: 0px;}
+</style>
+
+<div class="row withBottom" style="padding-top:12px; padding-bottom:12px;">
+  <div class="col-xs-3 noPR">
+        添加料包:
+  </div>
+
+  <div class="col-xs-2 liaoBao noPLR" onclick="addCu(this)">
+    加醋
+  </div>
+  <div class="col-xs-1"></div>
+
+  <div class="col-xs-2 liaoBao noPLR" onclick="addLa(this)">
+    加辣
+  </div>
+  <div class="col-xs-1"></div>
+
+  <div class="col-xs-2 liaoBao noPLR" onclick="addMa(this)">
+    加麻酱
+  </div>
+  <div class="col-xs-1"></div>
+
+  <div class="col-xs-12">
+    <span class="man30">
+      
+    </span>
+    </div>
+</div>
+
 <div class="row withBottom">
   <div class="col-xs-7" class="peiSongFei">粮票支付:</div>
   <div class="col-xs-5" style="text-align:right;">
@@ -180,6 +214,44 @@ $(document).ready(function(){
 $('#toggle-state-switch').on('switch-change', function (e, data) {
   //alert(data.value);//data.value表明当前开关的值，false代表关
 });
+</script>
+
+<script type="text/javascript">
+var cu = 0;
+var la = 0;
+var ma = 0;
+
+function addCu(th){
+  if(cu == 0){
+    cu = 1;
+    th.style.background = '#F94F29';
+  }else{
+    cu = 0;
+    th.style.background = '#cccccc';
+  }
+}
+
+function addLa(th){
+  if(la == 0){
+    la = 1;
+    th.style.background = '#F94F29';
+  }else{
+    la = 0;
+    th.style.background = '#cccccc';
+  }
+}
+
+function addMa(th){
+  if(ma == 0){
+    ma = 1;
+    th.style.background = '#F94F29';
+  }else{
+    ma = 0;
+    th.style.background = '#cccccc';
+  }
+}
+
+
 </script>
 
 
